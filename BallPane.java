@@ -1,17 +1,18 @@
-import javafx.animation.KeyFrame;
-import javafx.animation.Timeline;
+import javafx.animation.*;
 import javafx.beans.property.DoubleProperty;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
-import javafx.util.Duration;
-
+import javafx.util.*;
+import javafx.scene.control.*;
+import javafx.event.ActionEvent;
 public class BallPane extends Pane {
   public final double radius = 20;
   private double x = radius, y = radius;
   private double dx = 1, dy = 1;
   private Circle circle = new Circle(x, y, radius);
   private Timeline animation;
+  Button btnStop = new Button();
 
   public BallPane() {
     circle.setFill(Color.GREEN); // Set ball color
