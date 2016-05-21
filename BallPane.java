@@ -7,7 +7,8 @@ import javafx.util.*;
 import java.util.Random;
 
 public class BallPane extends Pane {
-	public final double radius = 20;
+	Random random = new Random();
+	public final double radius = random.nextInt(75)+1;
 	private double dx = 1, dy = 1; 
 	private double x = radius, y = radius;
   
@@ -17,7 +18,7 @@ public class BallPane extends Pane {
   
 	//private double dx = random.nextInt(250)+1, dy = random.nextInt(150)+1;  
 	public BallPane() {
-		circle.setFill(Color.GREEN); // Set ball color
+		circle.setFill(Color.rgb((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256))); // Set ball color
 		getChildren().add(circle); // Place a ball into this pane
 
 		// Create an animation for moving the ball
