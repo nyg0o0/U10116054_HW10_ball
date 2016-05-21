@@ -10,7 +10,7 @@ public class BounceBallControl extends Application {
 		BallPane ballPane = new BallPane(); // Create a ball pane
 
 		// Pause and resume animation
-		ballPane.setOnMouseClicked(e -> ballPane.newBall());
+		ballPane.setOnMouseClicked(e -> ballPane.newBall());	// new function
 		ballPane.setOnMousePressed(e -> ballPane.pause());
 		ballPane.setOnMouseReleased(e -> ballPane.play());
 

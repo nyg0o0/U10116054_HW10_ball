@@ -19,7 +19,6 @@ public class BallPane extends Pane {
 	private double trackX = 0.0;
 	private double trackY = 0.0;
 
-	//private double dx = random.nextInt(250)+1, dy = random.nextInt(150)+1;  
 	public BallPane() {
 		// random color
 		circle.setFill(Color.rgb((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256))); // Set ball color
@@ -36,7 +35,7 @@ public class BallPane extends Pane {
 	public void newBall(){
 		
 		Circle ballObj = new Circle(x, y, radius);
-		ballObj.setFill(Color.web("rgba(255,255,255,0)"));
+		ballObj.setFill(Color.web("rgba(255,255,255,0)"));	// alpha = 0
 		ballObj.setStroke(Color.rgb((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256))); // Set ball color
 		getChildren().add(ballObj); // Place a ball into this pane	
 		
