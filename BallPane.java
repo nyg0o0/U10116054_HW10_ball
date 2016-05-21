@@ -28,6 +28,11 @@ public class BallPane extends Pane {
 		animation.play(); // Start animation
   }
 
+	public void newBall(){
+		Circle ballObj = new Circle(x, y, radius);
+		//ballObj.setFill(Color.rgb((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256))); // Set ball color
+		getChildren().add(ballObj); // Place a ball into this pane	
+	}
 	public void play() {
 		animation.play();
 	}
